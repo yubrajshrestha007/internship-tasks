@@ -24,7 +24,7 @@ nav {
 }
 
 .logo {
-    color: white;
+    color: red;
     font-size: 24px;
     font-weight: bold;
 }
@@ -41,12 +41,16 @@ nav ul li {
 nav ul li a {
     text-decoration: none;
     color: white;
-    font-size: 16px;
+    font-size: 20px;
+}
+nav ul li a:hover{
+    color: red;
 }
 
 .login-btn {
+    font-size: 15px;
     padding: 8px 15px;
-    background: #f04e30;
+    background: red;
     color: white;
     border: none;
     cursor: pointer;
@@ -65,12 +69,11 @@ nav ul li a {
 
 .hero-content {
     font-size: 40px;
-    padding: 20px;
-    border-radius: 10px;
+    padding: 30px;
 }
 
 .about, .projects, .contact {
-    padding: 100px 50px;
+    padding: 100px 20px;
     text-align: center;
 }
 
@@ -110,6 +113,9 @@ nav ul li a {
     border: none;
     cursor: pointer;
     border-radius: 5px;
+}
+.contact button:hover{
+    background: red;
 }
 
 footer {
