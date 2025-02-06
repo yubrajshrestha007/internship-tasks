@@ -23,7 +23,7 @@ Details:
 	-Owner Transfer and Permission changing using Shell scripting
 	-Execution of the .sh files
 	-some more knowledge of new shell command.
-
+------------------------------------------------------------------------------
 Date : Februray 04,2025
 
 
@@ -42,27 +42,7 @@ Details:
 	-Execution of the .sh files
 
 	-some more knowledge of new shell command.
-Date : Februray 04,2025
-
-
-
-Trainee: Yubraj shrestha
-
-
-
-Training: Shell scripting
-
-
-
-Details:
-
-	-conditional statements in Shell scheduling
-
-	-Owner Transfer and Permission changing using Shell scripting
-
-	-Execution of the .sh files
-
-	-some more knowledge of new shell command.
+------------------------------------------------------------------------------
 
 Date : Februray 05,2025
 
@@ -75,6 +55,7 @@ Details:
     -Scheduling Top five Process heavy task using crontab. 
     -basic html tags and css selectors.
     -creating simple website using html and css
+-------------------------------------------------------------------------------
 
 Date : Februray 06,2025
 
