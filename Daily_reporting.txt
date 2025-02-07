@@ -68,4 +68,15 @@ Details:
     -DOM manipulation.
     -javascripts basic.
     -Impelementation of higher order function.
+--------------------------------------------------------------------------------
+Date : Februray 07,2025
 
+Trainee:Yubraj shrestha
+
+Training: Typescripts and javascript concepts
+
+Details:
+    -Typescipts basic concepts
+    -concepts like Generic, Eventloops , Execution orders, callstack.
+    -Used TS for implementing the basic JS Concets.
+    -Type and Interface in Typescripts.
