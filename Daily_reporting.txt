@@ -5,8 +5,8 @@ Trainee:Yubraj shrestha
 Training: Linux Fundamentals & File System
 
 Details:
-    -kali linux installation on WSL 
-    -Basic Linux Commands 
+    -kali linux installation on WSL
+    -Basic Linux Commands
     -Permission --Owner, Group , Others
     -Setting up a local environment on VS Code
     -Linux File System
@@ -52,7 +52,7 @@ Training: Crontab and basic html and css
 
 Details:
     -Implementation of Crontables and cron job.
-    -Scheduling Top five Process heavy task using crontab. 
+    -Scheduling Top five Process heavy task using crontab.
     -basic html tags and css selectors.
     -creating simple website using html and css
 -------------------------------------------------------------------------------
@@ -70,13 +70,18 @@ Details:
     -Impelementation of higher order function.
 --------------------------------------------------------------------------------
 Date : Februray 07,2025
-
 Trainee:Yubraj shrestha
-
 Training: Typescripts and javascript concepts
-
 Details:
     -Typescipts basic concepts
     -concepts like Generic, Eventloops , Execution orders, callstack.
     -Used TS for implementing the basic JS Concets.
     -Type and Interface in Typescripts.
+    --------------------------------------------------------------------------------
+Date : Februray 12,2025
+Trainee:Yubraj shrestha
+Training: Typescript and javascript concepts
+Details:
+    -Typescipt & javascript concepts.
+    -Form validation optimized.
+    -React basic concepts.
