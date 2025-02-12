@@ -3,61 +3,149 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Dynamic Form</title>
+    <title>Dynamic Registration Form</title>
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
-    <div class="container">
-        <form id="locationForm">
-            <h2>Fill Your Details</h2>
+    <div class="form-container">
+        <form id="form">
+            <h2>Registration Form</h2>
 
             <div class="form-group">
-                <label for="fname">First Name</label>
-                <input type="text" id="fname">
+                <label for="fname">First Name <span id="firstName-error" class="alert"></span></label>
+                <input type="text" id="fname" name="fname">
             </div>
 
             <div class="form-group">
-                <label for="lname">Last Name</label>
-                <input type="text" id="lname">
+                <label for="lname">Last Name <span id="lastName-error" class="alert"></span></label>
+                <input type="text" id="lname" name="lname">
             </div>
 
             <div class="form-group">
-                <label for="email">Email</label>
-                <input type="email" id="email">
+                <label for="email">Email <span id="email-error" class="alert"></span></label>
+                <input type="email" id="email" name="email">
+            </div>
+
+            <!-- <div class="form-group">
+                <label for="phone">Phone Number <span id="phone-error" class="alert"></span></label>
+                <input type="number" id="phone" name="phone">
+            </div> -->
+
+            <div class="form-group">
+                <label for="age">Age <span id="age-error" class="alert"></span></label>
+                <input type="number" id="age" name="age">
             </div>
 
             <div class="form-group">
-                <label for="age">Age</label>
-                <input type="number" id="age">
+                <label>Gender <span id="gender-error" class="alert"></span></label>
+                <input type="radio" name="gender" value="Male"> Male
+                <input type="radio" name="gender" value="Female"> Female
             </div>
 
             <div class="form-group">
-                <label for="province">Province</label>
+                <label>Course <span id="course-error" class="alert"></span></label>
+                <input type="radio" name="course" value="BSC"> BSC
+                <input type="radio" name="course" value="BBA"> BBA
+                <input type="radio" name="course" value="BCA"> BCA
+                <input type="radio" name="course" value="CSIT"> CSIT
+            </div>
+
+            <div class="form-group">
+                <label for="province">Province <span id="province-error" class="alert"></span></label>
                 <select id="province">
                     <option value="">Select Province</option>
                 </select>
             </div>
 
             <div class="form-group">
-                <label for="district">District</label>
+                <label for="district">District <span id="district-error" class="alert"></span></label>
                 <select id="district">
                     <option value="">Select District</option>
                 </select>
             </div>
 
             <div class="form-group">
-                <label for="municipality">Municipality</label>
+                <label for="municipality">Municipality <span id="municipality-error" class="alert"></span></label>
                 <select id="municipality">
                     <option value="">Select Municipality</option>
                 </select>
             </div>
 
-            <button id="submit-button">Submit</button>
+            <div class="form-group">
+                <label for="image">File Upload <span id="image-error" class="alert"></span></label>
+                <input type="file" id="image" name="image" accept="image/*">
+            </div>
+
+            <div class="form-group">
+                <label for="date">Submission Date <span id="date-error" class="alert"></span></label>
+                <input type="date" id="date" name="date">
+            </div>
+
+            <button type="submit" id="submit-button">Submit</button>
         </form>
     </div>
 
-    <!-- Import JS Files -->
-    <!-- <script src="nepal_location.js"></script> -->
-    <script type="module" src="script.js"></script>
+<aside id="render-result" style="display: block;">
+      <h1>Registration Data</h1>
+      <div id="render-form">
+        <div class="group-data">
+          <label for="fname">First Name:</label>
+          <span id="fname-data"></span>
+        </div>
+        <hr>
+        <div class="group-data">
+          <label for="lname">Last Name: </label>
+          <span id="lname-data"></span>
+        </div>
+        <hr>
+        <div class="group-data">
+          <label for="email">Email: </label>
+          <span id="email-data"></span>
+        </div>
+        <hr>
+        <!-- <div class="group-data">
+          <label for="age">Phone Number: </label>
+          <span id="phone-data"></span>
+        </div> -->
+        <hr>
+        <div class="group-data">
+          <label for="age">Age: </label>
+          <span id="age-data"></span>
+        </div>
+        <hr>
+        <div class="group-data">
+          <label for="gender">Gender: </label>
+          <span id="gender-data"></span>
+        </div>
+        <hr>
+        <div class="group-data">
+          <label for="course">Course: </label>
+          <span id="course-data"></span>
+        </div>
+        <hr>
+        <div class="group-data">
+          <label for="address">Address: </label>
+          <span id="address-data"></span>
+        </div>
+        <hr>
+        <div class="group-data">
+          <label for="submission">Submission Date: </label>
+          <span id="submission-data"></span>
+        </div>
+        <hr>
+        <div class="group-data">
+          <label for="certificate">12th Transcript: </label>
+          <span id="certificate-data"></span>
+        </div>
+        <div>
+          <details>
+            <summary>Preview</summary>
+            <img width="400" style="background-size: cover;" src="" id="render-image" alt="">
+          </details>
+        </div>
+      </div>
+    </aside>
+
+    <script type="module" src="./JS/script.js"></script>
 </body>
 </html>
