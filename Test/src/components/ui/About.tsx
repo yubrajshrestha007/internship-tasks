@@ -1,5 +1,5 @@
 import React from 'react'
-
+import { Skills } from "./Skills";
 export const About = () => {
   return (
     <div className="about-container">
@@ -17,10 +17,7 @@ export const About = () => {
       <div className="skills-section">
         <h2 className="text-3xl font-bold text-gray-900">Skills</h2>
         <ul className="list-none">
-          <li className="text-lg text-gray-600">JavaScript</li>
-          <li className="text-lg text-gray-600">React</li>
-          <li className="text-lg text-gray-600">Node.js</li>
-          <li className="text-lg text-gray-600">MongoDB</li>
+        <Skills/>
         </ul>
       </div>
       <div className="experience-section">

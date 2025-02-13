@@ -7,7 +7,7 @@ import HomePage from './Homepage';
 // import Project from './Project';
 
 const navLinks = [
-  { to: '/HomePage', text: 'Home' },
+  { to: '/', text: 'Home' },
   { to: '/about', text: 'About' },
   { to: '/contact', text: 'Contact' },
   { to: '/services', text: 'Services' },
@@ -16,7 +16,6 @@ const navLinks = [
 
 const Navbar = () => {
   return (
-    <BrowserRouter>
       <nav className='bg-green-200'>
         <div className="h-10vh flex justify-between z-50 text-black lg:py-5 px-20 py-4">
           <div className="flex items-center flex-1">
@@ -26,21 +25,13 @@ const Navbar = () => {
             <ul className="flex gap-8 mr-16 text-[18px]">
               {navLinks.map((link, index) => (
                 <li key={index}>
-                  <Link to={link.to}>{link.text}</Link>
+                  {link.text}
                 </li>
               ))}
             </ul>
           </div>
         </div>
       </nav>
-      <Routes>
-        <Route path="/" element={<HomePage />} />
-        <Route path="/about" element={<About />} />
-        {/* <Route path="/contact" element={<Contact />} />
-        <Route path="/services" element={<Services />} />
-        <Route path="/project" element={<Project />} /> */}
-      </Routes>
-    </BrowserRouter>
   );
 };
 

@@ -85,3 +85,14 @@ Details:
     -Typescipt & javascript concepts.
     -Form validation optimized.
     -React basic concepts.
+
+----------------------------------------------------------------------------------------
+Date : Februray 13,2025
+Trainee:Yubraj shrestha
+Training: React and Typescript
+Details:
+    -React basic concepts.
+    -Typescript with React.
+    -Portfolio using react and Tailwindcss.
+    -Next basic concepts.
+--------------------------------------------------------------------------------------------
