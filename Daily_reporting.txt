@@ -96,3 +96,13 @@ Details:
     -Portfolio using react and Tailwindcss.
     -Next basic concepts.
 --------------------------------------------------------------------------------------------
+Date : Februray 14,2025
+Trainee:Yubraj shrestha
+Training: Next.Js
+Details:
+-  Next.Js documentation on App Router.
+-Implementation of App Router.
+-CSS modules and cslx.
+-Next.Js basic concepts.
+-Implementation shadcn using Next.Js.
+-----------------------------------------------------------------------------------------
