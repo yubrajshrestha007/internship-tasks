@@ -29,7 +29,7 @@ import {
 // This is sample data.
 const data = {
   user: {
-    name: "shadcn",
+    name: "yubraj",
     email: "m@example.com",
     avatar: "/avatars/shadcn.jpg",
   },
@@ -52,18 +52,14 @@ const data = {
   ],
   navMain: [
     {
-      title: "Playground",
-      url: "#",
+      title: "Overview",
+      url: "/dashboard",
       icon: SquareTerminal,
       isActive: true,
       items: [
         {
-          title: "History",
-          url: "#",
-        },
-        {
-          title: "Starred",
-          url: "#",
+          title: "State",
+          url: "/",
         },
         {
           title: "Settings",
