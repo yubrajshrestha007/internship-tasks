@@ -106,3 +106,12 @@ Details:
 -Next.Js basic concepts.
 -Implementation shadcn using Next.Js.
 -----------------------------------------------------------------------------------------
+Date : Februray 19,2025
+Trainee:Yubraj shrestha
+Training: Next.Js and django
+Details:
+-Next.Js with Django.
+-Implementation of Django API.
+-Implementation of Next.Js API routes.
+-Token and user authentication .
+-----------------------------------------------------------------------------------------
