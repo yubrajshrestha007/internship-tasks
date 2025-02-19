@@ -1,0 +1,60 @@
+{
+  "products": [
+    {
+      "id": "2",
+      "name": "Samsung Galaxy S22",
+      "price": 899.99,
+      "quantity": 400,
+      "category": "Electronics"
+    },
+    {
+      "id": "3",
+      "name": "Nike Air Max 270",
+      "price": 129.99,
+      "quantity": 200,
+      "category": "Shoes"
+    },
+    {
+      "id": "4",
+      "name": "Adidas Superstar",
+      "price": 99.99,
+      "quantity": 150,
+      "category": "Shoes"
+    },
+    {
+      "id": "5",
+      "name": "Sony PlayStation 5",
+      "price": 499.99,
+      "quantity": 50,
+      "category": "Gaming"
+    },
+    {
+      "id": "6",
+      "name": "Microsoft Xbox Series X",
+      "price": 599.99,
+      "quantity": 100,
+      "category": "Gaming"
+    },
+    {
+      "id": "7",
+      "name": "Canon EOS Rebel T8i",
+      "price": 749.99,
+      "quantity": 20,
+      "category": "Cameras"
+    },
+    {
+      "id": "8",
+      "name": "Nikon D5600",
+      "price": 699.99,
+      "quantity": 30,
+      "category": "Cameras"
+    },
+    {
+      "id": "9",
+      "name": "Testing ",
+      "price": "20",
+      "quantity": 30,
+      "category": "Test"
+    }
+  ]
+}
