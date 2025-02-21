@@ -115,3 +115,20 @@ Details:
 -Implementation of Next.Js API routes.
 -Token and user authentication .
 -----------------------------------------------------------------------------------------
+Date : Februray 20,2025
+Trainee:Yubraj shrestha
+Training: Next.Js and Django
+Details:
+-Implementation of Django Rest Framework API.
+-Implementation of Next.Js API routes.
+-Debugged the Project UI.
+-Debugged the API routes.
+-----------------------------------------------------------------------------------------
+Date : Februray 21,2025
+Trainee:Yubraj shrestha
+Training: Django and postgres
+Details:
+-API test and ui merge
+-postgres basic.
+-Implementation of Postgres basic concepts.
+-----------------------------------------------------------------------------------------
