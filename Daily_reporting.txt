@@ -132,3 +132,11 @@ Details:
 -postgres basic.
 -Implementation of Postgres basic concepts.
 -----------------------------------------------------------------------------------------
+Date : Februray 25,2025
+Trainee:Yubraj shrestha
+Training: postgres
+Details:
+-Implementation of Postgres basic concepts.
+-Implementation of Postgres database.
+-bookstore database using Postgres.
+-----------------------------------------------------------------------------------------
