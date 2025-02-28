@@ -140,3 +140,11 @@ Details:
 -Implementation of Postgres database.
 -bookstore database using Postgres.
 -----------------------------------------------------------------------------------------
+Date : Februray 28,2025
+Trainee:Yubraj shrestha
+Training: postgres and Basic Django.
+Details:
+-using Postgres database in Django.
+-Implementation of Basic Django concepts.
+-Implementation of Django models and Form.
+-----------------------------------------------------------------------------------------
