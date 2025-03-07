@@ -35,21 +35,10 @@ const data = {
   },
   teams: [
     {
-      name: "Acme Inc",
+      name: "BOOK Store",
       logo: GalleryVerticalEnd,
       plan: "Enterprise",
-    },
-    {
-      name: "Acme Corp.",
-      logo: AudioWaveform,
-      plan: "Startup",
-    },
-    {
-      name: "Evil Corp.",
-      logo: Command,
-      plan: "Free",
-    },
-  ],
+    }],
   navMain: [
     {
       title: "Dashboard",
@@ -63,8 +52,8 @@ const data = {
       icon: Bot,
     },
     {
-      title: "Documentation",
-      url: "#",
+      title: "Orders",
+      url: "/Order",
       icon: BookOpen,
     },
     {

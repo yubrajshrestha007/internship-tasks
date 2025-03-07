@@ -20,23 +20,23 @@ import {
 interface DataTableProps<TData, TValue> {
   columns: ColumnDef<TData, TValue>[]
   data: TData[]
-  editProduct: (product: TData) => void; // New prop for edit functionality
-  deleteProduct: (id: string) => void; // Existing delete function
+  editBook: (product: TData) => void; // New prop for edit functionality
+  deleteBook:(id: string) => void; // Existing delete function
 }
 
 export function DataTable<TData, TValue>({
   columns,
   data,
-  editProduct,
-  deleteProduct,
+  editBook,
+  deleteBook,
 }: DataTableProps<TData, TValue>) {
   const table = useReactTable({
     data,
     columns,
     getCoreRowModel: getCoreRowModel(),
     meta:{
-        editProduct,
-        deleteProduct,
+        editBook,
+        deleteBook,
     }
   })
 
