@@ -10,7 +10,6 @@ import { Separator } from "@radix-ui/react-separator";
 import { ModeToggle } from "@/components/ui/modeToggler";
 import { AppSidebar } from "@/components/app-sidebar";
 import { ClientQueryProvider } from "@/components/clientQueryProvider"; // Import the new component
-import { usePathname } from "next/navigation";
 
 const geistSans = Geist({
   variable: "--font-geist-sans",
@@ -29,12 +28,6 @@ export default function RootLayout({
 }: Readonly<{
   children: React.ReactNode;
 }>) {
-  const pathname = usePathname();
-  const isLoginPage = pathname === "/login";
-//   const isRegisterPage = pathname === "/register";
-  const isSignUpPage = pathname === "/register";
-
-
   return (
     <html lang="en" suppressHydrationWarning>
       <body
@@ -47,12 +40,7 @@ export default function RootLayout({
             enableSystem
             disableTransitionOnChange
           >
-            {isLoginPage || isSignUpPage ? (
-              // Render only children for the login page (no sidebar)
-              <>{children}</>
-            ) : (
-              // Render sidebar and other components for other pages
-              <SidebarProvider>
+            <SidebarProvider>
                 <AppSidebar />
                 <SidebarInset>
                   <header className="flex my-5 h-20 shrink-0  items-center gap-5 transition-[width,height] ease-linear group-has-[[data-collapsible=icon]]/sidebar-wrapper:h-12 justify-between">
@@ -82,7 +70,6 @@ export default function RootLayout({
                   {children}
                 </SidebarInset>
               </SidebarProvider>
-            )}
           </ThemeProvider>
         </ClientQueryProvider>
       </body>

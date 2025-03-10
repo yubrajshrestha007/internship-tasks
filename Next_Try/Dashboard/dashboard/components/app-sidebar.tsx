@@ -2,20 +2,15 @@
 
 import * as React from "react"
 import {
-  AudioWaveform,
   BookOpen,
   Bot,
-  Command,
-  Frame,
   GalleryVerticalEnd,
-  Map,
-  PieChart,
   Settings2,
   SquareTerminal,
 } from "lucide-react"
 
 import { NavMain } from "@/components/nav-main"
-import { NavProjects } from "@/components/nav-projects"
+// import { NavProjects } from "@/components/nav-projects"
 import { NavUser } from "@/components/nav-user"
 import { TeamSwitcher } from "@/components/team-switcher"
 import {
@@ -48,17 +43,17 @@ const data = {
     },
     {
       title: "Product",
-      url: "/Product",
+      url: "/dashboard/Product",
       icon: Bot,
     },
     {
       title: "Orders",
-      url: "/Order",
+      url: "/dashboard/order-items",
       icon: BookOpen,
     },
     {
-      title: "Settings",
-      url: "#",
+      title: "test",
+      url: "/dashboard/test",
       icon: Settings2,
     },
   ],

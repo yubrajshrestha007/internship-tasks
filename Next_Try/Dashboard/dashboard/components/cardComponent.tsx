@@ -1,9 +1,7 @@
 'use client'
 import React, { useEffect, useState } from 'react'
-import { BarComponent } from './barComponent'
-import { AreaComponent } from './areaComponent'
 
-import { Card, CardContent, CardDescription, CardHeader, CardTitle } from '@/components/ui/card';
+import { Card, CardContent, CardHeader, CardTitle } from '@/components/ui/card';
 
 const Test = () => {
   const [products, setProducts] = useState<unknown[]>([]); // Use any[] or define a proper type

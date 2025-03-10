@@ -51,7 +51,7 @@ export const BookFormManagement: React.FC<BookFormManagementProps> = ({
       !newBook.categoryId ||
       !newBook.authorId ||
       !newBook.publication_date ||
-      !newBook.book_quantity ||
+      newBook.book_quantity <=0 ||
       !newBook.description
     ) {
       alert("Please fill all fields correctly!");

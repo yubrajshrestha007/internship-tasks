@@ -40,7 +40,7 @@ const BookManagement: React.FC<BookManagementProps> = ({
     publication_date: "",
     authorId: 0,
     description: "",
-    book_quantity: 1,
+    book_quantity:0,
   });
 
     // Reset Form
@@ -52,7 +52,7 @@ const BookManagement: React.FC<BookManagementProps> = ({
         authorId: 0,
         publication_date: "",
         description: "",
-        book_quantity: 1,
+        book_quantity: 0,
       });
       setEditingBookId(null);
     };
@@ -69,7 +69,7 @@ const BookManagement: React.FC<BookManagementProps> = ({
     } else if (name === "authorId" || name === "categoryId") {
       setNewBook({ ...newBook, [name]: parseInt(value) || 0 });
     } else if (name === "book_quantity") {
-      setNewBook({ ...newBook, [name]: parseInt(value) || 1 });
+      setNewBook({ ...newBook, [name]: parseInt(value) || 0 });
     } else {
       setNewBook({ ...newBook, [name]: value });
     }
