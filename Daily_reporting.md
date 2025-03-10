@@ -5,7 +5,9 @@
 ### **Date: February 03, 2025**
 
 **Trainee:** Yubraj Shrestha
+
 **Training:** Linux Fundamentals & File System
+
 **Details:**
 
 - Kali Linux installation on WSL
@@ -17,7 +19,9 @@
 ### **Day 2 - February 04, 2025**
 
 **Trainee:** Yubraj Shrestha
+
 **Training:** Shell Scripting
+
 **Details:**
 
 - Conditional statements in Shell scheduling
@@ -28,7 +32,9 @@
 ### **Day 3 - February 05, 2025**
 
 **Trainee:** Yubraj Shrestha
+
 **Training:** Crontab and Basic HTML & CSS
+
 **Details:**
 
 - Implementation of Crontab and cron jobs
@@ -39,7 +45,9 @@
 ### **Day 4 - February 06, 2025**
 
 **Trainee:** Yubraj Shrestha
+
 **Training:** Higher-Order Functions in JavaScript
+
 **Details:**
 
 - Learned about `map()`, `reduce()`, `filter()`
@@ -153,4 +161,49 @@
   - `Generic Views`
   - `ViewSets`
 - Studied authentication and permission in Django Rest Framework
-- Created `models`, `serializers`, `views`, and `URLs` for the bookstore project
+- Created `models`, `serializers`, `views`, and `URLs` for the bookstore project.
+
+### **Day 15 - March 05, 2025**
+
+**Trainee:** Yubraj Shrestha
+
+**Training:** Django Rest Framework
+
+**Details:**
+
+- implemented class-based and function-based views
+- used different `class-based` and `function-based` views in Django Rest Framework:
+  - `APIView`
+  - `Generic Views`
+  - `ViewSets`
+  - `@api_views`
+- implemented the serializers using the `.Serializer` for the bookstore project.
+-used the `API` to fetch data in `Nextjs` Dashboard Project
+
+### **Day 16 - March 06, 2025**
+
+**Trainee:** Yubraj Shrestha
+
+**Training:** Django Rest Framework
+
+**Details:**
+
+- implemented class-based and function-based views
+- used API to integrate with Nextjs Dashboard Project
+- understanding  `JWT`  basic concepts.
+- `CRUD` operation for the bookstore project using Django Rest Framework
+
+### **Day 17 - March 07, 2025**
+
+**Trainee:** Yubraj Shrestha
+
+**Training:** Django Rest Framework
+
+**Details:**
+
+- bookstore login page and register page
+
+- concepts of simple `JWT` and implemented for register.
+
+- concepts of `TanStack` Query.
+- arranged the Folder `structure` for TanStack Query and implemented the API for fetching data.

@@ -4,8 +4,10 @@ from .models import (
     Book, Author, User, Post, Category, BookReview, Order, OrderItem, Payment, Shipping
 )
 from .serializers import (
-    BookSerializer, AuthorSerializer, UserSerializer, PostSerializer, CategorySerializer,
+    RegisterSerializer,BookSerializer, AuthorSerializer, UserSerializer, PostSerializer, CategorySerializer,
     BookReviewSerializer, OrderSerializer, OrderItemSerializer, PaymentSerializer, ShippingSerializer
+
+
 )
 from rest_framework.views import APIView
 from rest_framework import generics
@@ -17,6 +19,7 @@ from rest_framework.decorators import api_view, permission_classes
 from django.contrib.auth import authenticate
 from rest_framework_simplejwt.tokens import RefreshToken
 from django.contrib.auth import authenticate, get_user_model
+from rest_framework.permissions import AllowAny, IsAuthenticated
 from rest_framework import status
 
 
@@ -181,39 +184,35 @@ def shipping_list(request):
             return Response(serializer.data, status=status.HTTP_201_CREATED)
         return Response(serializer.errors, status=status.HTTP_400_BAD_REQUEST)
 
-# @api_view(['POST'])
-# @permission_classes([AllowAny])
-# def register_user(request):
-#     """
-#     Register a new user.
-#     """
-#     serializer = RegisterSerializer(data=request.data)
+@api_view(['POST'])
+@permission_classes([AllowAny])
+def register_user(request):
+    """
+    Register a new user.
+    """
+    serializer = RegisterSerializer(data=request.data)
 
-#     if serializer.is_valid():
-#         serializer.save()
-#         return Response(serializer.data, status=status.HTTP_201_CREATED)
-#     print(serializer.errors)
-#     return Response({"errors":serializer.errors}, status=status.HTTP_400_BAD_REQUEST)
+    if serializer.is_valid():
+        serializer.save()
+        return Response(serializer.data, status=status.HTTP_201_CREATED)
+    print(serializer.errors)
+    return Response({"errors":serializer.errors}, status=status.HTTP_400_BAD_REQUEST)
 
-# # @api_view(['POST'])
-# @permission_classes([AllowAny])
-# def login_user(request):
-#     """
-#     Authenticate user and return JWT tokens.
-#     """
-#     username = request.data.get("username")
-#     password = request.data.get("password")
-
-#     if not username or not password:
-#         return Response({"error": "Both username and password are required."}, status=status.HTTP_400_BAD_REQUEST)
-
-#     user = authenticate(username=username, password=password)
-
-#     if user:
-#         refresh = RefreshToken.for_user(user)
-#         return Response(
-#             {"access": str(refresh.access_token), "refresh": str(refresh)},
-#             status=status.HTTP_200_OK
-#         )
-
-#     return Response({"error": "Invalid username or password"}, status=status.HTTP_401_UNAUTHORIZED)
+@api_view(['POST'])
+@permission_classes([AllowAny])
+def login_user(request):
+    """
+    Authenticate user and return JWT tokens.
+    """
+    email= request.data.get("email")
+    password = request.data.get("password")
+    if not email or not password:
+        return Response({"error": "Both email and password are required."}, status=status.HTTP_400_BAD_REQUEST)
+    user = authenticate(email=email, password=password)
+    if user:
+        refresh = RefreshToken.for_user(user)
+        return Response(
+            {"access": str(refresh.access_token), "refresh": str(refresh)},
+            status=status.HTTP_200_OK
+        )
+    return Response({"error": "Invalid email or password"}, status=status.HTTP_401_UNAUTHORIZED)

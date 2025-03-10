@@ -1,5 +1,18 @@
 from rest_framework import serializers
-from .models import *
+from .models import User, Author ,Post,Category,Book,BookReview,Order,OrderItem,Payment,Shipping,PAYMENT_METHODS,SHIPPING_METHODS
+
+
+class RegisterSerializer(serializers.ModelSerializer):
+    password = serializers.CharField(write_only=True)
+
+    class Meta:
+        model = User
+        fields = ['username', 'email', 'address', 'password',]
+
+    def create(self, validated_data):
+        user = User.objects.create_user(**validated_data)
+        return user
+
 
 
 class AuthorSerializer(serializers.Serializer):
@@ -21,19 +34,21 @@ class AuthorSerializer(serializers.Serializer):
         return instance
 
 class UserSerializer(serializers.Serializer):
+    id = serializers.IntegerField(read_only=True)
     username=serializers.CharField(max_length=200)
     email=serializers.EmailField()
-    password=serializers.CharField(max_length=200)
-    created_at=serializers.DateTimeField()
-    updated_at=serializers.DateTimeField()
+    password=serializers.CharField(max_length=200, write_only=True)
+    address=serializers.CharField(max_length=200)
+    created_at=serializers.DateTimeField(read_only=True)
+    updated_at=serializers.DateTimeField(read_only=True)
     def create(self, validated_data):
-        return User.objects.create(**validated_data)
+        return User.objects.create_user(**validated_data)
     def update(self, instance, validated_data):
         instance.username = validated_data.get('username', instance.username)
         instance.email = validated_data.get('email', instance.email)
-        instance.password = validated_data.get('password', instance.password)
-        instance.created_at = validated_data.get('created_at', instance.created_at)
-        instance.updated_at = validated_data.get('updated_at', instance.updated_at)
+        if 'password' in validated_data:
+             instance.set_password(validated_data['password'])
+        instance.address = validated_data.get('address', instance.address)
         instance.save()
         return instance
 
@@ -99,74 +114,74 @@ class BookReviewSerializer(serializers.Serializer):
         instance.save()
         return instance
 
+
 class OrderSerializer(serializers.Serializer):
-    user= serializers.PrimaryKeyRelatedField(queryset=User.objects.all())
-    order_date=serializers.DateTimeField()
-    total=serializers.DecimalField(max_digits=10, decimal_places=2)
+    id = serializers.IntegerField(read_only=True)
+    user_id= serializers.PrimaryKeyRelatedField(queryset=User.objects.all(),source='user')
+    user= UserSerializer(read_only=True)
+    order_date=serializers.DateTimeField(read_only=True)
+    status = serializers.CharField(max_length=20, read_only=True)
     def create(self, validated_data):
         return Order.objects.create(**validated_data)
     def update(self, instance, validated_data):
         instance.user = validated_data.get('user', instance.user)
-        instance.order_date = validated_data.get('order_date', instance.order_date)
-        instance.total = validated_data.get('total', instance.total)
         instance.status = validated_data.get('status', instance.status)
         instance.save()
         return instance
 
 class OrderItemSerializer(serializers.Serializer):
-    order= serializers.PrimaryKeyRelatedField(queryset=Order.objects.all())
-    book= serializers.PrimaryKeyRelatedField(queryset=Book.objects.all())
+    id = serializers.IntegerField(read_only=True)
+    order_id= serializers.PrimaryKeyRelatedField(queryset=Order.objects.all(),source='order')
+    book_id= serializers.PrimaryKeyRelatedField(queryset=Book.objects.all(), source='book')
+    order= OrderSerializer(read_only=True)
+    book= BookSerializer(read_only=True)
     quantity=serializers.IntegerField()
-    price=serializers.DecimalField(max_digits=10, decimal_places=2)
+    price=serializers.DecimalField(max_digits=10, decimal_places=2, read_only=True)
+
     def create(self, validated_data):
+        book = validated_data['book']
+        quantity = validated_data['quantity']
+        price = book.price * quantity
+        validated_data['price'] = price
         return OrderItem.objects.create(**validated_data)
+
     def update(self, instance, validated_data):
+        book = validated_data.get('book', instance.book)
+        quantity = validated_data.get('quantity', instance.quantity)
+        price = book.price * quantity
+        validated_data['price'] = price
         instance.order = validated_data.get('order', instance.order)
-        instance.book = validated_data.get('book', instance.book)
-        instance.quantity = validated_data.get('quantity', instance.quantity)
-        instance.price = validated_data.get('price', instance.price)
+        instance.book = book
+        instance.quantity = quantity
+        instance.price = price
         instance.save()
         return instance
-
-
 class PaymentSerializer(serializers.Serializer):
+    id = serializers.IntegerField(read_only=True)
     order= serializers.PrimaryKeyRelatedField(queryset=Order.objects.all())
-    payment_date=serializers.DateTimeField()
+    payment_date=serializers.DateTimeField(read_only=True)
     payment_method=serializers.ChoiceField(choices=PAYMENT_METHODS,default='Paypal')
     amount=serializers.DecimalField(max_digits=10, decimal_places=2)
     def create(self, validated_data):
         return Payment.objects.create(**validated_data)
     def update(self, instance, validated_data):
         instance.order = validated_data.get('order', instance.order)
-        instance.payment_date = validated_data.get('payment_date', instance.payment_date)
         instance.payment_method = validated_data.get('payment_method', instance.payment_date)
         instance.amount = validated_data.get('amount', instance.amount)
         instance.save()
         return instance
 
 class ShippingSerializer(serializers.Serializer):
+    id = serializers.IntegerField(read_only=True)
     order= serializers.PrimaryKeyRelatedField(queryset=Order.objects.all())
-    shipping_date=serializers.DateTimeField()
+    shipping_date=serializers.DateTimeField(read_only=True)
     shipping_method=serializers.ChoiceField(choices=SHIPPING_METHODS)
     shipping_address=serializers.CharField(max_length=100)
     def create(self, validated_data):
         return Shipping.objects.create(**validated_data)
     def update(self, instance, validated_data):
         instance.order = validated_data.get('order', instance.order)
-        instance.shipping_date= validated_data.get('shipping_date', instance.shipping_date)
         instance.shipping_method = validated_data.get('shipping_method', instance.shipping_method)
         instance.shipping_address = validated_data.get('shipping_address', instance.shipping_address)
         instance.save()
         return instance
-
-
-# class RegisterSerializer(serializers.ModelSerializer):
-#     password = serializers.CharField(write_only=True)
-
-#     class Meta:
-#         model = User
-#         fields = ['username', 'email', 'address', 'password', 'is_employer']
-
-#     def create(self, validated_data):
-#         user = User.objects.create_user(**validated_data)
-#         return user
