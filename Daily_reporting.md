@@ -202,8 +202,17 @@
 **Details:**
 
 - bookstore login page and register page
-
 - concepts of simple `JWT` and implemented for register.
-
 - concepts of `TanStack` Query.
 - arranged the Folder `structure` for TanStack Query and implemented the API for fetching data.
+
+### **Day 18 - March 10, 2025**
+
+**Trainee:** Yubraj Shrestha
+
+**Training:**  simpleJWT and PyJWT
+
+**Details:**
+- Auth using the simpleJWT.-
+- `PyJWT` concepts like payload, header, and signature.
+- UI for the Dashboard of order-item using Nextjs.
