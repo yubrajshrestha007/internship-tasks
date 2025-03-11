@@ -27,8 +27,8 @@ urlpatterns = [
     path('book-reviews/', BookReviewList.as_view(), name='bookreview-list'),
     path('book-reviews/<int:pk>/', BookReviewDetail.as_view(), name='bookreview-detail'),
     path('shippings/', shipping_list, name='shipping-list'),
-    path('api/token/', TokenObtainPairView.as_view(), name='token_obtain_pair'),
-    path('api/token/refresh/', TokenRefreshView.as_view(), name='token_refresh'),
+    path('token/', TokenObtainPairView.as_view(), name='token_obtain_pair'),
+    path('token/refresh/', TokenRefreshView.as_view(), name='token_refresh'),
 ]
 
 router = DefaultRouter()
