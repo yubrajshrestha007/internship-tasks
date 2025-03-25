@@ -213,6 +213,113 @@
 **Training:**  simpleJWT and PyJWT
 
 **Details:**
-- Auth using the simpleJWT.-
+
+- Auth using the simpleJWT.
 - `PyJWT` concepts like payload, header, and signature.
 - UI for the Dashboard of order-item using Nextjs.
+
+### **Day 19: March 11, 2025**
+
+**Trainee:** Yubraj Shrestha
+
+**Training:** PyJWT and Django Admin
+
+**Details:**
+
+- Admin model customization for the bookstore.
+- Implemented the `PyJWT` for the login and register page.
+- Concepts like JWT Algorithm {
+    HS256, RS256
+}
+
+### **Day 20: March 12 ,2025**
+
+**Trainee:** Yubraj Shrestha
+
+**Training:** PyJWT
+
+**Details**:
+
+- Auth using the PyJWT.
+- UI for the Dashboard.
+
+### **Day 21: March 17, 2025**
+
+**Trainee:** Yubraj Shrestha
+
+**Training:** Artist Management backend
+
+**Details**:
+
+- Implemented Artist Management backend using Django Rest Framework.
+- Create the models,serializers , views and urls for the Artist Management backend.
+- Implemented the PyJWT authentication for the Artist Management backend.
+
+### **Day 22: March 18, 2025**
+
+**Trainee:** Yubraj Shrestha
+
+**Training:** Artist Management backend
+
+**Details**:
+
+- Raw queries for login and register.
+- Create the models,serializers, views and urls for Apps.
+
+### **Day 23: March 19, 2025**
+
+**Trainee:** Yubraj Shrestha
+
+**Training:** Artist Management backend
+
+**Details:**
+
+- Implemented the CRUD operations for User and Artist.
+- Raw queries for CRUD for User.
+
+### **Day 24: March 20, 2025**
+
+**Trainee:** Yubraj Shrestha
+
+**Training:** Artist Management backend
+
+**Details:**
+
+- Music role based access control.
+- Frontend for Artist Management.
+- UI for login and register page.
+
+### **Date 25: March 21, 2025**
+
+**Trainee:** Yubraj Shrestha
+
+**Training:** Artist Management Frontend
+
+**Details:**
+
+- Authentication and Authorization for Artist Management
+- API integration for login and register.
+
+### **Day 26 : March 24, 2025**
+
+**Trainee:** Yubraj Shrestha
+
+**Training:** Artist Management Frontend
+
+**Details:**
+
+- Middleware for login and dashboard page.
+- User CRUD dashboard for super admin.
+- Authentication and role based login for user.
+
+### **Day 27: March 25, 2025**
+
+**Trainee:** Yubraj Shrestha
+
+**Training:** Artist Management Frontend
+
+**Details:**
+
+- User CRUD dashboard for super admin and Artist_manager.
+- Role base access to the dashboard.
+- Manager profile CRUD.
