@@ -323,3 +323,15 @@
 - User CRUD dashboard for super admin and Artist_manager.
 - Role base access to the dashboard.
 - Manager profile CRUD.
+
+### **Date: April 1, 2025**
+
+**Trainee** : Yubraj Shrestha
+
+**Training**: Artist Management Frontend
+
+**Details:**
+
+- Music api for Artist.
+- Manager profile and Artist profile.
+- UI rework for sidebar.
